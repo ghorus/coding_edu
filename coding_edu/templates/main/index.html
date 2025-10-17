@@ -4,11 +4,11 @@
         <div style="display:flex;flex-direction:column;gap:30px;align-items:center;padding:0px 30px;">
             <h1 class="hero-header">Publish Your <span style="text-decoration:underline;">First Website on Day One</span></h1>
             <p class="hero-p">Interactive. Practical. Free. The best way to start your <b style="color:rgb(189, 0, 189);">web development </b>career.</p>
-            <button class="blue-btn">Start Learning Now</button>
+            <button class="blue-btn first-call">Start Learning Now</button>
         </div>
     </section>
     <section class="s2">
-        <div class="s2-inner-container">
+        <div class="s2-inner-container" id="s2-inner-container">
             <img src="{{ url_for('static', filename='images/student.jpg') }}" class="s2-img"/>
             <div class="s2-content">
                 <div style="margin:0px 0px 20px 0px;">
@@ -20,10 +20,11 @@
                 <div class="signup-container">
                     <h2 class="intro-title">Start Your Web Dev Journey.</h2>
                     <p class="intro-p">Start learning today with your first interactive HTML lesson — no experience required. Enter your email below to begin!</p>
-                    <div class="signup-btn-container">
-                        <input class="signup-input"/>
-                        <button style="border-radius:0px 20px 20px 0px;padding:5px 20px;background-color:#E9FF45;border:none;">Join</button>
-                    </div>
+                    <form class="signup-btn-container" method="post">
+                         {{form.hidden_tag() }}
+                         {{form.email(class_="signup-input")}}
+                         {{form.submit(class_="signup-btn")}}
+                    </>
                 </div>
             </div>
         </div>
@@ -31,7 +32,7 @@
     <section class="s3">
         <div class="s3-left">
             <h1 class="s3-left-title">For the coding community.</h1>
-            <p style="font-size:20px;">Learn from a developer who knows been there, done that.</p>
+            <p style="font-size:20px;">Learn from a developer who's been there, done that.</p>
         </div>
         <div class="s3-right">
             <h1 style="font-size:60px;margin:-40px 0px;">“</h1>
@@ -110,10 +111,18 @@
                             <p>Smart note-taking tools to connect ideas and reinforce learning</p>
                         </li>
                     </ul>
-                    <button class="blue-btn">Start Learning Now</button>
+                    <button type="button" class="blue-btn final-call">Start Learning Now</button>
 
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        document.querySelector(".final-call").addEventListener("click", () => {
+            document.querySelector("#s2-inner-container").scrollIntoView({ behavior: "smooth" });
+            });
+        document.querySelector(".first-call").addEventListener("click", () => {
+            document.querySelector("#s2-inner-container").scrollIntoView({ behavior: "smooth" });
+            });
+    </script>
 {% endblock %}
