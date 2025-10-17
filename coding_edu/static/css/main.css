@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('/static/fonts/Manrope.ttf') format('truetype');
+}
+h1,h2,body,p, html{
+    margin:0;
+    padding:0;
+}
+body,button {
+    font-family: 'Manrope';
+
+}
+.s {
+    display:flex;justify-content:center;text-align:center;align-items:center;height:95vh;width:100%;
+    background-color: #ffffff;
+
+    background-image: radial-gradient(#000567 0.65px, #ffffff 0.65px);
+    background-size: 13px 13px;
+}
+
+.blue-btn {
+    width:300px;color:rgb(23, 131, 255);background-color:white;font-size:20px;padding:10px 20px;border:2px solid rgb(23, 131, 255);border-radius:5px;
+}
+.blue-btn:hover {
+    background-color: rgb(23, 131, 255);
+    color:rgb(250, 250, 250);
+    transition-duration: 0.2s;
+}
+.compare-outline {
+    height:20px;background-color:#000B42;
+    border-radius:10px 10px 0px 0px;
+}
+.compare-content {
+    border:1px solid gray;
+    padding:20px;
+}
+.compare-content-list {
+    display:flex;flex-direction:column;gap:17px;padding:0;
+}
+.compare-content-list-item {
+    display:flex;align-items:center;gap:20px;
+}
+.compare-container {
+    display:flex;flex-direction:column;
+    width:500px;
+    background-color: white;
+}
+.hero-header {
+    font-size:70px;letter-spacing:-3px;
+}
+.intro-title {
+    font-size:27px;
+    margin-bottom:15px;
+}
+.intro-p {
+    font-weight:lighter;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin-bottom:20px;
+}
+.hero-p {
+    font-size:24px;
+}
+.signup-btn-container {
+    display:flex;margin:30px 0px 0px 0px;
+}
+.s2 {
+    background-color: #ffffff;
+    background-image:  linear-gradient(#000567 1.3px, transparent 1.3px), linear-gradient(to right, #000567 1.3px, #ffffff 1.3px);
+    background-size: 26px 26px;
+
+    color:white;display:flex;justify-content:center;padding:100px 0px;
+}
+.s2-inner-container {
+    justify-content:space-between;align-items:center;background-color:#000B42;padding:20px;width:980px;border-radius:7px;display:flex;gap:80px;
+}
+.s2-content {
+    width:600px;
+}
+.signup-input {
+    padding:5px 20px;border:none;width:300px;border-radius:20px 0px 0px 20px;
+}
+.s2-img {
+    height:500px;border-radius:10px;
+}
+.s3 {
+    display:flex;height:900px;align-items:center;justify-content:center;padding:30px;justify-content:space-around;
+}
+.s3-left {
+    display:flex;flex-direction:column;gap:20px;
+}
+.s3-left-title {
+    font-size:75px;line-height:90px;
+}
+.s3-right {
+    border-radius:10px;padding:20px;height:380px;width:380px;display:flex;flex-direction:column;justify-content:center;gap:20px;box-shadow:10px 10px 30px gray;
+}
+.compare-main-container {
+    display:flex;justify-content:center;gap:80px;
+}
+.s4 {
+    gap:70px;height:700px;background-color:rgb(248, 248, 248);display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+.s4-title {
+    font-size:30px;
+    text-align: center;
+    padding:0px 20px;
+}
+@media screen and (max-width: 478px) {
+        .hero-header {
+            font-size:55px;
+        }
+        .hero-p {
+            font-size:20px;
+        }
+        .s2-img {
+            height:370px;
+        }
+        .s3-left-title {
+            font-size:50px;
+            line-height: 50px;
+        }
+        .s3-right {
+            width:300px;
+        }
+        .s4-title {
+            font-size:23px;
+        }
+    }
+@media screen and (max-width: 383px) {
+        .hero-header {
+            font-size:45px;
+        }
+    }
+
+@media screen and (max-width:1095px){
+    .s2-inner-container {
+        flex-direction: column;
+        width:90%;
+        text-align: center;
+    }
+    .signup-container {
+        display:flex;flex-direction:column;align-items:center;width:100%;
+        
+    }
+    .signup-btn-container {
+        margin:0;
+    }
+    .compare-main-container {
+        flex-direction: column;
+    }
+    .s4 {
+        height:100%;
+        padding:100px 0px;
+    }
+}
+@media screen and (max-width:910px) {
+    .s3 {
+        flex-direction: column;
+    }
+    .s3-left {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:690px){
+    .s2-content {
+        width:90%;
+    }
+    .signup-input {
+        width:200px;
+    }
+
+}
+
+@media screen and (max-width:527px) {
+     .compare-container {
+        width:400px;
+    }
+}
+@media screen and (max-width:425px) {
+     .compare-container {
+        width:365px;
+    }
+}
